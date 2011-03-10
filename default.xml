@@ -7,14 +7,14 @@
   <remote  name="github-offspring"
            fetch="git://github.com/offspring/" />
 
-  <remote  name="nvidia-tegra"
+  <remote  name="origin"
            fetch="git://nv-tegra.nvidia.com/android/" />
 
   <remote  name="nvidia-tegra-kernel"
            fetch="git://nv-tegra.nvidia.com/" />
 
   <default revision="gingerbread-tegra"
-           remote="nvidia-tegra" />
+           remote="origin" />
 
   <project path="build" name="platform/build">
     <copyfile src="core/root.mk" dest="Makefile" />
