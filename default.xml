@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote  name="origin"
+  <remote  name="korg"
+           fetch="git://android.git.kernel.org/"
+           review="review.source.android.com" />
+
+  <remote  name="github-offspring"
+           fetch="git://github.com/offspring/" />
+
+  <remote  name="nvidia-tegra"
            fetch="git://nv-tegra.nvidia.com/android/" />
 
-  <default revision="master" remote="origin" />
+  <remote  name="nvidia-tegra-kernel"
+           fetch="git://nv-tegra.nvidia.com/" />
+
+  <default revision="gingerbread-tegra"
+           remote="nvidia-tegra" />
 
   <project path="build" name="platform/build">
     <copyfile src="core/root.mk" dest="Makefile" />
@@ -156,5 +167,12 @@
   <project path="external/zlib" name="platform/external/zlib" />
   <project path="vendor/sample" name="platform/vendor/sample" />
   <project path="cts" name="platform/cts" />
+
+  <project path="vendor/nvidia/harmony" name="tegra2_vendor_nvidia_harmony"
+           revision="eclair-tegra"
+           remote="github-offspring" >
+    <copyfile src="buildspec.mk.default" dest="buildspec.mk" />
+  </project>
+
 </manifest>
 
