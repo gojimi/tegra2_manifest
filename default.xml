@@ -2,7 +2,7 @@
 <manifest>
   <remote name="origin" fetch="git://nv-tegra.nvidia.com/android/"/>
 
-  <default revision="master" remote="origin"/>
+  <default revision="gingerbread-tegra" remote="origin"/>
 
   <project path="build" name="platform/build">
     <copyfile src="core/root.mk" dest="Makefile"/>
